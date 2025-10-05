@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سورة البقرة - آيات ٨٤-٨٨ | Surah Al-Baqarah - Verses 84-88</title>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri+Quran&family=Amiri:wght@400;700&family=Lato:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            line-height: 1.8;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: #333;
+            padding-top: 0;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .navigation {
+            text-align: center;
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .nav-link {
+            background: linear-gradient(45deg, #8b4513, #a0522d);
+            color: white;
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            display: inline-block;
+            min-width: 120px;
+            text-align: center;
+        }
+
+        .nav-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .audio-player-section {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .audio-player-section h3 {
+            color: #8b4513;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+
+        .audio-player-section p {
+            color: #666;
+            margin-bottom: 15px;
+            font-size: 0.95rem;
+        }
+
+        .audio-controls {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            align-items: center;
+        }
+
+        audio {
+            width: 100%;
+            max-width: 600px;
+            border-radius: 25px;
+            outline: none;
+            height: 54px;
+        }
+
+        audio::-webkit-media-controls-panel {
+            background: linear-gradient(45deg, #8b4513, #a0522d);
+        }
+
+        audio:focus {
+            outline: 2px solid #8b4513;
+            outline-offset: 2px;
+        }
+
+        .reciter-info {
+            font-family: 'Amiri', serif;
+            color: #8b4513;
+            font-size: 1.1rem;
+            margin-top: 10px;
+        }
+
+        .verse-selector {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            justify-content: center;
+            margin-top: 15px;
+            width: 100%;
+        }
+
+        .verse-btn {
+            background: linear-gradient(45deg, #8b4513, #a0522d);
+            color: white;
+            border: none;
+            padding: 10px 18px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            min-width: 80px;
+            touch-action: manipulation;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .verse-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(139, 69, 19, 0.3);
+        }
+
+        .verse-btn.active {
+            background: linear-gradient(45deg, #a0522d, #8b4513);
+            box-shadow: 0 0 15px rgba(139, 69, 19, 0.5);
+        }
+
+        .header h1 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .arabic-title {
+            font-family: 'Amiri', serif;
+            font-size: 2rem;
+            color: #8b4513;
+            margin-bottom: 10px;
+            direction: rtl;
+        }
+
+        .page-info {
+            font-size: 0.9rem;
+            color: #666;
+            margin-top: 10px;
+        }
+
+        .verses-container {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            overflow-x: hidden;
+        }
+
+        .verse {
+            margin-bottom: 40px;
+            padding: 25px;
+            background: linear-gradient(to right, #f8f9fa, #ffffff);
+            border-left: 5px solid #8b4513;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+        }
+
+        .verse:hover {
+            transform: translateX(5px);
+        }
+
+        .verse-number {
+            display: inline-block;
+            background: linear-gradient(45deg, #8b4513, #a0522d);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+        }
+
+        .arabic-text {
+            font-family: 'Amiri Quran', 'Amiri', serif;
+            font-size: 2rem;
+            line-height: 2.8;
+            text-align: right;
+            direction: rtl;
+            color: #1a472a;
+            margin: 20px 0;
+            padding: 25px;
+            background: #f8fdf9;
+            border-radius: 8px;
+            border: 2px solid #8b4513;
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+            hyphens: none;
+        }
+
+        .english-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #555;
+            margin-top: 15px;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+        }
+
+        .reflection-section {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            overflow-x: hidden;
+        }
+
+        .reflection-section h2 {
+            color: #8b4513;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+            text-align: center;
+        }
+
+        .reflection-point {
+            margin-bottom: 30px;
+            padding: 25px;
+            background: linear-gradient(to right, #fff, #f8f9fa);
+            border-left: 4px solid #a0522d;
+            border-radius: 8px;
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+        }
+
+        .reflection-point h3 {
+            color: #8b4513;
+            margin-bottom: 15px;
+        }
+
+        .reflection-arabic {
+            font-family: 'Amiri', serif;
+            font-size: 1.3rem;
+            line-height: 2.2;
+            text-align: right;
+            direction: rtl;
+            color: #2c3e50;
+            padding: 15px;
+            background: #f8fdf9;
+            border-radius: 6px;
+            margin-bottom: 15px;
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+            hyphens: none;
+        }
+
+        .reflection-english {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: #555;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 6px;
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .footer-text {
+            color: #666;
+            font-style: italic;
+            margin: 10px 0;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+
+            .header {
+                padding: 20px 15px;
+                margin-bottom: 20px;
+            }
+
+            .arabic-title {
+                font-size: 1.5rem;
+            }
+
+            .header h1 {
+                font-size: 1.3rem;
+            }
+
+            .page-info {
+                font-size: 0.85rem;
+            }
+
+            .audio-player-section {
+                padding: 15px;
+                margin-bottom: 20px;
+            }
+
+            .audio-player-section h3 {
+                font-size: 1.1rem;
+            }
+
+            .audio-player-section p {
+                font-size: 0.85rem;
+            }
+
+            audio {
+                max-width: 100%;
+            }
+
+            .verse-selector {
+                gap: 6px;
+            }
+
+            .verse-btn {
+                padding: 10px 14px;
+                font-size: 0.85rem;
+                flex: 0 0 calc(33.333% - 6px);
+                text-align: center;
+            }
+
+            .reciter-info {
+                font-size: 1rem;
+            }
+
+            .verses-container {
+                padding: 20px 15px;
+                margin-bottom: 20px;
+            }
+
+            .verse {
+                padding: 15px;
+                margin-bottom: 25px;
+            }
+
+            .verse-number {
+                font-size: 0.85rem;
+                padding: 4px 12px;
+            }
+
+            .arabic-text {
+                font-size: 1.5rem;
+                line-height: 2.4;
+                padding: 15px;
+            }
+
+            .english-text {
+                font-size: 0.95rem;
+                padding: 12px;
+            }
+
+            .reflection-section {
+                padding: 20px 15px;
+                margin-bottom: 20px;
+            }
+
+            .reflection-section h2 {
+                font-size: 1.4rem;
+            }
+
+            .reflection-point {
+                padding: 15px;
+                margin-bottom: 20px;
+            }
+
+            .reflection-point h3 {
+                font-size: 1rem;
+            }
+
+            .reflection-arabic {
+                font-size: 1.1rem;
+                line-height: 2;
+                padding: 12px;
+            }
+
+            .reflection-english {
+                font-size: 0.95rem;
+                padding: 12px;
+            }
+
+            .footer {
+                padding: 20px 15px;
+            }
+
+            .footer-text {
+                font-size: 0.9rem;
+            }
+
+            .nav-link {
+                padding: 8px 15px;
+                font-size: 0.85rem;
+                margin: 0 5px;
+            }
+
+            .navigation {
+                margin-bottom: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .arabic-title {
+                font-size: 1.3rem;
+            }
+
+            .header h1 {
+                font-size: 1.1rem;
+            }
+
+            .verse-btn {
+                flex: 0 0 calc(50% - 6px);
+                padding: 12px 10px;
+                font-size: 0.8rem;
+            }
+
+            .arabic-text {
+                font-size: 1.3rem;
+                line-height: 2.2;
+                padding: 12px;
+            }
+
+            .english-text {
+                font-size: 0.9rem;
+            }
+
+            .reflection-arabic {
+                font-size: 1rem;
+                line-height: 1.9;
+            }
+
+            .reflection-english {
+                font-size: 0.9rem;
+            }
+
+            .nav-link {
+                display: block;
+                margin: 5px auto;
+                max-width: 200px;
+            }
+        }
+
+        @media print {
+            body {
+                background: white;
+            }
+            .navigation {
+                display: none;
+            }
+            .audio-player-section {
+                display: none;
+            }
+        }
+    </style>
+    <script>
+        let currentVerse = 84;
+        
+        function playVerse(verseNumber) {
+            currentVerse = verseNumber;
+            const audio = document.getElementById('quranAudio');
+            const source = document.getElementById('audioSource');
+            
+            // Format verse number to 3 digits (e.g., 084)
+            const formattedVerse = String(verseNumber).padStart(3, '0');
+            
+            // Update audio source
+            source.src = `https://everyayah.com/data/Abdul_Basit_Murattal_192kbps/002${formattedVerse}.mp3`;
+            
+            // Load and play
+            audio.load();
+            audio.play();
+            
+            // Update button styles
+            document.querySelectorAll('.verse-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.target.classList.add('active');
+        }
+        
+        // Auto-play next verse when current one ends
+        document.addEventListener('DOMContentLoaded', function() {
+            const audio = document.getElementById('quranAudio');
+            
+            audio.addEventListener('ended', function() {
+                if (currentVerse < 88) {
+                    const nextBtn = document.querySelector(`[onclick="playVerse(${currentVerse + 1})"]`);
+                    if (nextBtn) {
+                        nextBtn.click();
+                    }
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="navigation">
+            <a href="#" class="nav-link">← Previous Page</a>
+            <a href="#" class="nav-link">Next Page →</a>
+        </div>
+
+        <div class="header">
+            <div class="arabic-title">سورة البقرة</div>
+            <h1>Surah Al-Baqarah (The Cow)</h1>
+            <div class="page-info">Page 13 | Verses 84-88</div>
+        </div>
+
+        <div class="audio-player-section">
+            <h3>🎧 استماع للآيات | Listen to the Verses</h3>
+            <p>القارئ: عبد الباسط عبد الصمد | Reciter: Abdul Basit Abdus Samad</p>
+            
+            <div class="audio-controls">
+                <audio id="quranAudio" controls>
+                    <source id="audioSource" src="https://everyayah.com/data/Abdul_Basit_Murattal_192kbps/002084.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+                
+                <div class="verse-selector">
+                    <button class="verse-btn active" onclick="playVerse(84)">Verse 84</button>
+                    <button class="verse-btn" onclick="playVerse(85)">Verse 85</button>
+                    <button class="verse-btn" onclick="playVerse(86)">Verse 86</button>
+                    <button class="verse-btn" onclick="playVerse(87)">Verse 87</button>
+                    <button class="verse-btn" onclick="playVerse(88)">Verse 88</button>
+                </div>
+                
+                <div class="reciter-info">
+                    بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ
+                </div>
+            </div>
+        </div>
+
+        <div class="verses-container">
+            <div class="verse">
+                <span class="verse-number">Verse 84</span>
+                <div class="arabic-text">
+                    وَإِذْ أَخَذْنَا مِيثَٰقَكُمْ لَا تَسْفِكُونَ دِمَآءَكُمْ وَلَا تُخْرِجُونَ أَنفُسَكُم مِّن دِيَٰرِكُمْ ثُمَّ أَقْرَرْتُمْ وَأَنتُمْ تَشْهَدُونَ
+                </div>
+                <div class="english-text">
+                    And [recall] when We took your covenant, [saying], "Do not shed each other's blood or evict one another from your homes." Then you acknowledged [this] while you were witnessing.
+                </div>
+            </div>
+
+            <div class="verse">
+                <span class="verse-number">Verse 85</span>
+                <div class="arabic-text">
+                    ثُمَّ أَنتُمْ هَٰٓؤُلَآءِ تَقْتُلُونَ أَنفُسَكُمْ وَتُخْرِجُونَ فَرِيقًۭا مِّنكُم مِّن دِيَٰرِهِمْ تَظَٰهَرُونَ عَلَيْهِم بِٱلْإِثْمِ وَٱلْعُدْوَٰنِ وَإِن يَأْتُوكُمْ أُسَٰرَىٰ تُفَٰدُوهُمْ وَهُوَ مُحَرَّمٌ عَلَيْكُمْ إِخْرَاجُهُمْ ۚ أَفَتُؤْمِنُونَ بِبَعْضِ ٱلْكِتَٰبِ وَتَكْفُرُونَ بِبَعْضٍۢ ۚ فَمَا جَزَآءُ مَن يَفْعَلُ ذَٰلِكَ مِنكُمْ إِلَّا خِزْىٌۭ فِى ٱلْحَيَوٰةِ ٱلدُّنْيَا ۖ وَيَوْمَ ٱلْقِيَٰمَةِ يُرَدُّونَ إِلَىٰٓ أَشَدِّ ٱلْعَذَابِ ۗ وَمَا ٱللَّهُ بِغَٰفِلٍ عَمَّا تَعْمَلُونَ
+                </div>
+                <div class="english-text">
+                    Then, you are those [same ones who are] killing one another and evicting a party of your people from their homes, cooperating against them in sin and aggression. And if they come to you as captives, you ransom them, although their eviction was forbidden to you. So do you believe in part of the Scripture and disbelieve in part? Then what is the recompense for those who do that among you except disgrace in worldly life; and on the Day of Resurrection they will be sent back to the severest of punishment. And Allah is not unaware of what you do.
+                </div>
+            </div>
+
+            <div class="verse">
+                <span class="verse-number">Verse 86</span>
+                <div class="arabic-text">
+                    أُو۟لَٰٓئِكَ ٱلَّذِينَ ٱشْتَرَوُا۟ ٱلْحَيَوٰةَ ٱلدُّنْيَا بِٱلْءَاخِرَةِ ۖ فَلَا يُخَفَّفُ عَنْهُمُ ٱلْعَذَابُ وَلَا هُمْ يُنصَرُونَ
+                </div>
+                <div class="english-text">
+                    Those are the ones who have bought the life of this world [in exchange] for the Hereafter, so the punishment will not be lightened for them, nor will they be aided.
+                </div>
+            </div>
+
+            <div class="verse">
+                <span class="verse-number">Verse 87</span>
+                <div class="arabic-text">
+                    وَلَقَدْ ءَاتَيْنَا مُوسَى ٱلْكِتَٰبَ وَقَفَّيْنَا مِنۢ بَعْدِهِۦ بِٱلرُّسُلِ ۖ وَءَاتَيْنَا عِيسَى ٱبْنَ مَرْيَمَ ٱلْبَيِّنَٰتِ وَأَيَّدْنَٰهُ بِرُوحِ ٱلْقُدُسِ ۗ أَفَكُلَّمَا جَآءَكُمْ رَسُولٌۢ بِمَا لَا تَهْوَىٰٓ أَنفُسُكُمُ ٱسْتَكْبَرْتُمْ فَفَرِيقًۭا كَذَّبْتُمْ وَفَرِيقًۭا تَقْتُلُونَ
+                </div>
+                <div class="english-text">
+                    And We did certainly give Moses the Scripture and followed up after him with messengers. And We gave Jesus, the son of Mary, clear proofs and supported him with the Pure Spirit. But is it [not] that every time a messenger came to you, [O Children of Israel], with what your souls did not desire, you were arrogant? And a party [of messengers] you denied and another party you killed.
+                </div>
+            </div>
+
+            <div class="verse">
+                <span class="verse-number">Verse 88</span>
+                <div class="arabic-text">
+                    وَقَالُوا۟ قُلُوبُنَا غُلْفٌۢ ۚ بَل لَّعَنَهُمُ ٱللَّهُ بِكُفْرِهِمْ فَقَلِيلًۭا مَّا يُؤْمِنُونَ
+                </div>
+                <div class="english-text">
+                    And they said, "Our hearts are wrapped." But, [in fact], Allah has cursed them for their disbelief, so little is it that they believe.
+                </div>
+            </div>
+        </div>
+
+        <div class="reflection-section">
+            <h2>💭 تأملات يومية | Daily Reflections</h2>
+            
+            <div class="reflection-point">
+                <h3>🤝 الميثاق المقدس | The Sacred Covenant</h3>
+                <div class="reflection-arabic">
+                    أُخذ الميثاق على بني إسرائيل ألا يسفكوا دماء بعضهم ولا يُخرجوا بعضهم من ديارهم. هذا ميثاق إنساني عظيم - حرمة الدماء وحرمة المساكن. كل مؤمن عليه أن يحترم دماء إخوانه وممتلكاتهم. حقوق الإنسان في الإسلام ليست جديدة، بل قديمة قدم الرسالات.
+                </div>
+                <div class="reflection-english">
+                    The covenant was taken from the Children of Israel not to shed each other's blood nor evict each other from their homes. This is a great humanitarian covenant - the sanctity of blood and the sanctity of homes. Every believer must respect the blood and property of their brothers. Human rights in Islam are not new, but as old as the divine messages themselves.
+                </div>
+            </div>
+
+            <div class="reflection-point">
+                <h3>⚖️ الانتقائية في الدين | Selectivity in Religion</h3>
+                <div class="reflection-arabic">
+                    أتؤمنون ببعض الكتاب وتكفرون ببعض؟ هذا سؤال استنكاري عظيم! الانتقائية في الدين - أخذ ما يناسبنا وترك ما لا يناسبنا - مرض خطير. الإيمان الحق هو القبول الكامل بكل ما جاء من عند الله، لا اختيار ما نريد وترك ما نكره. لا يجوز أن نجعل الدين تابعاً لأهوائنا.
+                </div>
+                <div class="reflection-english">
+                    Do you believe in part of the Scripture and disbelieve in part? This is a great rhetorical question! Selectivity in religion - taking what suits us and leaving what doesn't - is a dangerous disease. True faith is complete acceptance of everything that comes from Allah, not choosing what we want and leaving what we dislike. We must not make religion subservient to our desires.
+                </div>
+            </div>
+
+            <div class="reflection-point">
+                <h3>🌍 الخزي في الدنيا والعذاب في الآخرة | Disgrace in This World and Punishment in the Hereafter</h3>
+                <div class="reflection-arabic">
+                    من يفعل ذلك فجزاؤه الخزي في الحياة الدنيا وأشد العذاب يوم القيامة. الانتقائية في الدين لها عواقب مزدوجة: الذل والخزي في الدنيا، والعذاب الشديد في الآخرة. الله لا يغفل عما نعمل. كل تصرفاتنا محسوبة ومسجلة.
+                </div>
+                <div class="reflection-english">
+                    Whoever does that, their recompense is disgrace in worldly life and the severest punishment on the Day of Resurrection. Selectivity in religion has dual consequences: humiliation and disgrace in this world, and severe punishment in the Hereafter. Allah is not unaware of what we do. All our actions are counted and recorded.
+                </div>
+            </div>
+
+            <div class="reflection-point">
+                <h3>💰 شراء الدنيا بالآخرة | Trading the Hereafter for This World</h3>
+                <div class="reflection-arabic">
+                    اشتروا الحياة الدنيا بالآخرة - أي باعوا آخرتهم من أجل متاع قليل في الدنيا. هذه أسوأ صفقة في التاريخ! من يبيع الأبدية من أجل اللحظة، والجنة من أجل الدنيا، فقد خسر خسراناً مبيناً. علينا أن نعيش للآخرة ونعمل لها، والدنيا عابرة زائلة.
+                </div>
+                <div class="reflection-english">
+                    They bought the life of this world in exchange for the Hereafter - meaning they sold their Hereafter for a little worldly gain. This is the worst deal in history! Whoever sells eternity for a moment, and Paradise for this world, has suffered a clear loss. We must live for the Hereafter and work for it, as this world is transient and fleeting.
+                </div>
+            </div>
+
+            <div class="reflection-point">
+                <h3>📜 إرسال الرسل والمعجزات | Sending of Messengers and Miracles</h3>
+                <div class="reflection-arabic">
+                    آتى الله موسى الكتاب وأرسل من بعده الرسل، وآتى عيسى البينات وأيّده بروح القدس. رغم كل هذه الآيات والمعجزات، كانوا يكذّبون فريقاً ويقتلون فريقاً! الكبر والهوى يعميان القلوب عن رؤية الحق. عندما يأتي الرسول بما لا تهوى الأنفس، يكون الاستكبار والرفض.
+                </div>
+                <div class="reflection-english">
+                    Allah gave Moses the Scripture and sent messengers after him, and gave Jesus clear proofs and supported him with the Holy Spirit. Despite all these signs and miracles, they denied some and killed others! Arrogance and desire blind hearts from seeing the truth. When the messenger comes with what the soul does not desire, there is arrogance and rejection.
+                </div>
+            </div>
+
+            <div class="reflection-point">
+                <h3>🔒 القلوب المغلقة | Sealed Hearts</h3>
+                <div class="reflection-arabic">
+                    قالوا قلوبنا غُلف - أي مغلقة لا تفهم. لكن الحقيقة أن الله لعنهم بكفرهم فقليلاً ما يؤمنون. القلب المغلق بالكفر والكبر لا يدخله الإيمان. نسأل الله قلوباً مفتوحة للحق، قابلة للهداية، خاشعة لله. اللهم لا تجعل في قلوبنا غلاً ولا كبراً!
+                </div>
+                <div class="reflection-english">
+                    They said our hearts are wrapped - meaning closed and unable to understand. But the truth is that Allah cursed them for their disbelief, so little do they believe. A heart sealed by disbelief and arrogance cannot accept faith. We ask Allah for hearts open to truth, receptive to guidance, humble before Allah. O Allah, do not place in our hearts rancor or arrogance!
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="footer-text">
+                "أَفَتُؤْمِنُونَ بِبَعْضِ ٱلْكِتَٰبِ وَتَكْفُرُونَ بِبَعْضٍۢ"
+            </div>
+            <div class="footer-text">
+                "Do you believe in part of the Scripture and disbelieve in part?"
+            </div>
+            <div class="footer-text">
+                May this daily reflection bring us closer to Allah and increase our understanding of His words
+            </div>
+            <div class="footer-text">
+                🤲 آمين يا رب العالمين | Ameen Ya Rabb Al-Alameen 🤲
+            </div>
+        </div>
+    </div>
+</body>
+</html>
